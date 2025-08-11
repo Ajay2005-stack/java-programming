@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class ArrayMean {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Read number of elements
+        int n = scanner.nextInt();
+        int[] numbers = new int[n];
+
+        // Read array elements and calculate sum
+        int sum = 0;
+        for (int i = 0; i < n; i++) {
+            numbers[i] = scanner.nextInt();
+            sum += numbers[i];
+        }
+
+        // Calculate mean
+        double mean = (double) sum / n;
+
+        // Print mean with 2 decimal places
+        System.out.printf("Array Mean Value is %.2f\n", mean);
+
+        scanner.close();
+    }
+}
