@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class RemoveVowels {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+         Read the input string
+        String input = sc.nextLine();
+        
+         Remove vowels using replaceAll with regex (case insensitive)
+        String output = input.replaceAll("(?i)[aeiou]", "");
+        
+         Print the string without vowels
+        System.out.println(output);
+        
+        sc.close();
+    }
+}
