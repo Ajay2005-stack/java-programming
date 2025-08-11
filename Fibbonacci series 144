@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int n = scanner.nextInt(); // Start index
+        int m = scanner.nextInt(); // End index
+
+        // Validate constraints
+        if (n < 1 || n > 20 || m < 1 || m > 20) {
+            System.out.println("Invalid Input");
+        } else {
+            int[] fib = new int[21]; // To hold up to the 20th Fibonacci number (index 1-20)
+            fib[1] = 0;
+            fib[2] = 1;
+
+            // Generate Fibonacci series up to 20th term
+            for (int i = 3; i <= 20; i++) {
+                fib[i] = fib[i - 1] + fib[i - 2];
+            }
+
+            int sum = 0;
+
+            // Sum from nth to mth Fibonacci number (inclusive)
+            for (int i = n; i <= m; i++) {
+                sum += fib[i];
+            }
+
+            System.out.println("The Sum of Fibonacci value is " + (double) sum);
+        }
+
+        scanner.close();
+    }
+}
