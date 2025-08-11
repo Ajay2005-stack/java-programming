@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Read the input number
+        int number = scanner.nextInt();
+
+        // Check if the number has more than 2 digits
+        if (number >= 0 && number <= 99) {
+            System.out.println("Invalid Input");
+        } else {
+            int sum = 0;
+            int temp = number;
+
+            // Calculate the sum of digits
+            while (temp > 0) {
+                sum += temp % 10;
+                temp /= 10;
+            }
+
+            System.out.println("Sum of digit is " + sum);
+        }
+
+        scanner.close();
+    }
+}
