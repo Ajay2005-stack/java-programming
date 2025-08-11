@@ -1,0 +1,38 @@
+import java.util.*;
+
+public class Main {
+    public static int sumOfSecondLargestEvenAndSecondSmallestOdd(int[] arr) {
+        List<Integer> evenIndexElements = new ArrayList<>();
+        List<Integer> oddIndexElements = new ArrayList<>();
+
+        for (int i = 0; i < arr.length; i++) {
+            if (i % 2 == 0) {
+                evenIndexElements.add(arr[i]);
+            } else {
+                oddIndexElements.add(arr[i]);
+            }
+        }
+
+        Collections.sort(evenIndexElements);
+        Collections.sort(oddIndexElements);  
+
+        int secondLargestEven = evenIndexElements.get(evenIndexElements.size() - 2);
+        int secondSmallestOdd = oddIndexElements.get(1);
+
+        return secondLargestEven + secondSmallestOdd;
+    }
+
+    public static void main(String[] args) {
+         Sample input
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();  number of elements
+        int[] arr = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        int result = sumOfSecondLargestEvenAndSecondSmallestOdd(arr);
+        System.out.println("Sum=" + result);
+    }
+}
