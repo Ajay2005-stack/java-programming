@@ -5,22 +5,22 @@ public class KLargestElements {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Read array size
+         Read array size
         int n = scanner.nextInt();
 
-        // Read array elements
+         Read array elements
         int[] arr = new int[n];
         for (int i = 0; i < n; i++) {
             arr[i] = scanner.nextInt();
         }
 
-        // Read value of K
+         Read value of K
         int k = scanner.nextInt();
 
-        // Sort the array
+         Sort the array
         Arrays.sort(arr);
 
-        // Print the sorted array
+         Print the sorted array
         System.out.print("The elements are in the order: ");
         for (int num : arr) {
             System.out.print(num + " ");
