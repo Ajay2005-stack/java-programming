@@ -1,0 +1,47 @@
+import java.util.Scanner;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int n = scanner.nextInt();
+
+        // Check if n is negative
+        if (n < 0) {
+            System.out.println("Invalid Input");
+            return;
+        }
+
+        int[] ages = new int[n];
+        boolean invalidAge = false;
+
+        for (int i = 0; i < n; i++) {
+            ages[i] = scanner.nextInt();
+            if (ages[i] < 0) {
+                invalidAge = true;
+            }
+        }
+
+        if (invalidAge) {
+            System.out.println("Invalid Input");
+            return;
+        }
+
+        int youngest = ages[0];
+        int oldest = ages[0];
+
+        for (int i = 1; i < n; i++) {
+            if (ages[i] < youngest) {
+                youngest = ages[i];
+            }
+            if (ages[i] > oldest) {
+                oldest = ages[i];
+            }
+        }
+
+        System.out.println("Youngest=" + youngest);
+        System.out.println("Oldest=" + oldest);
+
+        scanner.close();
+    }
+}
