@@ -1,0 +1,32 @@
+import java.util.Scanner;
+import java.util.HashSet;
+
+public class DistinctElements {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Read size of the array
+        int n = scanner.nextInt();
+
+        // Use a HashSet to store unique elements
+        HashSet<Integer> distinctSet = new HashSet<>();
+
+        // Read the elements and add to the set
+        for (int i = 0; i < n; i++) {
+            int num = scanner.nextInt();
+            distinctSet.add(num);  // HashSet only keeps unique values
+        }
+
+        // Count of distinct elements
+        int distinctCount = distinctSet.size();
+
+        // Output with proper grammar
+        if (distinctCount == 1) {
+            System.out.println("There is 1 distinct element in the array.");
+        } else {
+            System.out.println("There are " + distinctCount + " distinct elements in the array.");
+        }
+
+        scanner.close();
+    }
+}
