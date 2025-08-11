@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class RemoveSpaces {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+         Read the input string
+        String input = sc.nextLine();
+        
+         Remove all blank spaces using replaceAll
+        String output = input.replaceAll(" ", "");
+        
+         Print the string without spaces
+        System.out.println(output);
+        
+        sc.close();
+    }
+}
