@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Number of buildings
+        int n = scanner.nextInt();
+
+        // Read the door numbers
+        int[] doors = new int[n];
+        for (int i = 0; i < n; i++) {
+            doors[i] = scanner.nextInt();
+        }
+
+        // Friend's address (door number)
+        int target = scanner.nextInt();
+
+        // Search for the target door number
+        int index = -1;
+        for (int i = 0; i < n; i++) {
+            if (doors[i] == target) {
+                index = i;
+                break;
+            }
+        }
+
+        // Output
+        if (index == -1) {
+            System.out.println("-1");
+        } else {
+            System.out.printf("Door Number is %03d-DN\n", index);
+        }
+
+        scanner.close();
+    }
+}
