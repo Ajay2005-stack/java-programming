@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class CharacterTypeCounter {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Read the input string
+        String input = scanner.nextLine().toLowerCase();  // Convert to lowercase for vowel/consonant check
+
+        int vowels = 0;
+        int consonants = 0;
+        int digits = 0;
+        int specialChars = 0;
+
+        for (char ch : input.toCharArray()) {
+            if (ch >= 'a' && ch <= 'z') {
+                if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+                    vowels++;
+                } else {
+                    consonants++;
+                }
+            } else if (ch >= '0' && ch <= '9') {
+                digits++;
+            } else {
+                specialChars++;
+            }
+        }
+
+         Print the results
+        System.out.println("vowels:" + vowels);
+        System.out.println("consonants:" + consonants);
+        System.out.println("digits:" + digits);
+        System.out.println("special characters:" + specialChars);
+    }
+}
