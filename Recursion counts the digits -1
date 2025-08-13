@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Main {
+
+     Recursive method to count digits
+    public static int countDigits(int n) {
+        if (n == 0) {
+            return 0;
+        }
+        return 1 + countDigits(n / 10);
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int num = scanner.nextInt();
+
+         Handle the special case when number is 0
+        if (num == 0) {
+            System.out.println("The Count the digits: 1");
+        } else {
+            // Work with absolute value to support negative numbers
+            int count = countDigits(Math.abs(num));
+            System.out.println("The Count the digits: " + count);
+        }
+
+        scanner.close();
+    }
+}
