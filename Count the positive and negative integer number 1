@@ -4,14 +4,14 @@ public class CountPositiveNegative {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Read number of elements
+         Read number of elements
         int n = scanner.nextInt();
 
-        // Initialize counters
+         Initialize counters
         int positiveCount = 0;
         int negativeCount = 0;
 
-        // Read the list of integers and count positives/negatives
+         Read the list of integers and count positives/negatives
         for (int i = 0; i < n; i++) {
             int num = scanner.nextInt();
             if (num > 0) {
@@ -21,7 +21,7 @@ public class CountPositiveNegative {
             }
         }
 
-        // Print output formatted to 2 decimal places
+         Print output formatted to 2 decimal places
         System.out.printf("Count of Positive Integer is %.2f\n", (double) positiveCount);
         System.out.printf("Count of Negative Integer is %.2f\n", (double) negativeCount);
 
