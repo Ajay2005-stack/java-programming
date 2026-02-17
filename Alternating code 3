@@ -9,12 +9,12 @@ public class CSKTicketChecker {
     }
 
     private static boolean isAlternatingTwoLetters(String s) {
-        // If length is less than 2, cannot alternate two different letters
+         If length is less than 2, cannot alternate two different letters
         if (s.length() < 2) {
             return false;
         }
 
-        // Check if there are exactly two distinct letters
+         Check if there are exactly two distinct letters
         char first = s.charAt(0);
         char second = 0;
         boolean secondFound = false;
@@ -25,32 +25,32 @@ public class CSKTicketChecker {
                     second = c;
                     secondFound = true;
                 } else if (c != second) {
-                    // More than two distinct letters
+                     More than two distinct letters
                     return false;
                 }
             }
         }
 
-        // If only one distinct letter, return false
+         If only one distinct letter, return false
         if (!secondFound) {
             return false;
         }
 
-        // Now check alternating pattern: positions even -> first, odd -> second or vice versa
+         Now check alternating pattern: positions even -> first, odd -> second or vice versa
         for (int i = 0; i < s.length(); i++) {
             char expected = (i % 2 == 0) ? first : second;
             if (s.charAt(i) != expected) {
-                // Try the other pattern
-                // i.e. even -> second, odd -> first
+                 Try the other pattern
+                 i.e. even -> second, odd -> first
                 for (int j = 0; j < s.length(); j++) {
                     char expectedAlt = (j % 2 == 0) ? second : first;
                     if (s.charAt(j) != expectedAlt) {
-                        return false; // Neither pattern matched fully
+                        return false;  Neither pattern matched fully
                     }
                 }
-                return true; // Pattern matched for alternate arrangement
+                return true;  Pattern matched for alternate arrangement
             }
         }
-        return true; // Pattern matched for first arrangement
+        return true;  Pattern matched for first arrangement
     }
 }
