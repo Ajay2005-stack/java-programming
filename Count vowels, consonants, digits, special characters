@@ -4,9 +4,8 @@ public class CharacterTypeCounter {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Read the input string
-        String input = scanner.nextLine().toLowerCase();  // Convert to lowercase for vowel/consonant check
-
+         Read the input string
+        String input = scanner.nextLine().toLowerCase();  
         int vowels = 0;
         int consonants = 0;
         int digits = 0;
