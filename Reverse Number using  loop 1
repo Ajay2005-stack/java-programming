@@ -6,13 +6,13 @@ public class Solution {
 
         long number = scanner.nextLong();  // Use long to handle large inputs
 
-        // Validate input constraints
+        
         if (number <= 0 || number > 1000000000) {
             System.out.println("Invalid Input");
         } else {
             long reversed = 0;
 
-            // Reverse the number using a loop
+            
             while (number != 0) {
                 long digit = number % 10;
                 reversed = reversed * 10 + digit;
