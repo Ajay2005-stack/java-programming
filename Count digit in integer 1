@@ -11,7 +11,7 @@ public class Solution {
             int count = 0;
             long temp = num;
 
-            // Count digits using loop
+             Count digits using loop
             while (temp > 0) {
                 temp /= 10;
                 count++;
