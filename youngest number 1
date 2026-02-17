@@ -6,7 +6,7 @@ public class Solution {
 
         int n = scanner.nextInt();
 
-        // Check if n is negative
+        
         if (n < 0) {
             System.out.println("Invalid Input");
             return;
