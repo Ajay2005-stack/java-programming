@@ -27,7 +27,7 @@ public class KLargestElements {
         }
         System.out.println();
 
-        // Print the Kth value and largest K elements
+        
         System.out.print("The Kth value is " + k + " and Largest elements are ");
         for (int i = n - 1; i >= n - k; i--) {
             System.out.print(arr[i] + " ");
