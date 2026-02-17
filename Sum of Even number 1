@@ -7,7 +7,7 @@ public class Solution {
         int n = scanner.nextInt();
         int m = scanner.nextInt();
 
-        // Validate constraints
+        
         if (n <= 0 || m <= 0 || n >= 30 || m >= 30 || n > m) {
             System.out.println("Invalid Input");
         } else {
