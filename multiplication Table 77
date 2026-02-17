@@ -6,11 +6,11 @@ public class Solution {
 
         int n = scanner.nextInt(); // Read input
 
-        // Check constraint
+        
         if (n < 1 || n > 9) {
             System.out.println("Invalid Input");
         } else {
-            // Print multiplication table from 1 to n
+            
             for (int i = 1; i <= n; i++) {
                 System.out.println(n + " x " + i + " = " + (n * i));
             }
