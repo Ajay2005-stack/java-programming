@@ -5,16 +5,16 @@ public class Solution {
         Scanner scanner = new Scanner(System.in);
         String input = scanner.next();
 
-        // If less than 2 digits, print nothing
+        
         if (input.length() < 2) {
             return;
         }
 
-        // Swap first two digits
+       
         char first = input.charAt(0);
         char second = input.charAt(1);
 
-        // Print swapped result
+        
         System.out.println("" + second + first);
 
         scanner.close();
