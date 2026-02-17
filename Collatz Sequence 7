@@ -8,7 +8,7 @@ public class Solution {
         int n = scanner.nextInt();
         int count = 0;
 
-        System.out.println(n); // Print the starting number
+        System.out.println(n); 
 
         while (n != 1) {
             if (n % 2 == 0) {
