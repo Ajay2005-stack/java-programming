@@ -18,7 +18,7 @@ public class Main {
         if (num == 0) {
             System.out.println("The Count the digits: 1");
         } else {
-            // Work with absolute value to support negative numbers
+            
             int count = countDigits(Math.abs(num));
             System.out.println("The Count the digits: " + count);
         }
