@@ -4,14 +4,14 @@ public class StringConcatenation {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Reading two strings from input
+        
         String first = scanner.nextLine();
         String second = scanner.nextLine();
 
-        // Concatenating the strings
+        
         String result = first + second;
 
-        // Printing the result
+        
         System.out.println(result);
     }
 }
